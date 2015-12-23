@@ -3,6 +3,7 @@ $navbar-inverse-bg: #27ae60;
 $navbar-inverse-link-color: white;
 $brand-primary: #f39c12;
 $jumbotron-bg: #bdc3c7;
+$btn-border-radius-small: 50%;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
@@ -26,8 +27,22 @@ html {
      font-weight: bold;
 }
 
-h1 {
-  margin-left: 5%;
+.article {
+  font-size: 1.2em;
+}
+
+.btn-success {
+  font-size: 0.75em;
+  line-height: 0.8em;
+  float: right;
+}
+
+// h1 {
+//   margin-left: 5%;
+// }
+
+ol {
+  width: 70%;
 }
 
 ol li {

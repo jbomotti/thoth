@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  include PagesHelper
   def home
   end
 
@@ -8,5 +9,7 @@ class PagesController < ApplicationController
   def nytech
       url = "http://rss.nytimes.com/services/xml/rss/nyt/Technology.xml"
       @feed = Feedjira::Feed.fetch_and_parse url
+      create_articles(@feed)
+      @articles = Article.all
   end
 end

@@ -1,8 +1,11 @@
 <div class="container">
-  <h1 class="finder">NY Times Technology</h1>
   <ol class="finder">
-    <% @feed.entries.each do |entry| %>
-      <li class="finder"><%= link_to entry.title, entry.url, :target => '_blank' %></li>
+  <h1 class="finder center">NY Times Technology</h1>
+    <% @articles.each do |entry| %>
+      <li class="finder">
+        <%= link_to entry.title, entry.url, :target => '_blank', :class => 'article' %>
+        <button type="button" class="btn btn-sm btn-success finder" id="fave-<%= entry.id %>">Favorite</button>
+      </li>
     <% end %>
   </ol>
 </div>
