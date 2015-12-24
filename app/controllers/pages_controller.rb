@@ -12,4 +12,9 @@ class PagesController < ApplicationController
       create_articles(@feed)
       @articles = Article.all
   end
+
+  def favorites
+    add_favorite(params[:article_id]) if params[:article_id]
+    @favorites = Favorite.all
+  end
 end

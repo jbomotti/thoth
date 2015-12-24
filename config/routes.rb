@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get "about" => "pages#about"
   get "nytech" => "pages#nytech"
-  get "favorites" => "favorites#index"
+  get "favorites" => "pages#favorites"
 
   resources :favorites
 

@@ -1,7 +1,7 @@
 <div class="container">
   <ol class="finder feed">
-    <h1 class="finder center">NY Times Personal Tech</h1>
-    <% @articles.each do |entry| %>
+    <h1 class="finder center">Favorite Articles</h1>
+    <% @favorites.each do |entry| %>
       <li class="finder">
         <%= link_to entry.title, entry.url, :target => '_blank', :class => 'article' %>
         <%= link_to "Favorite", favorites_path(:article_id => entry.id), :class => 'btn btn-sm btn-success finder' %>
