@@ -3,14 +3,50 @@ $navbar-inverse-bg: #27ae60;
 $navbar-inverse-link-color: white;
 $brand-primary: #f39c12;
 $jumbotron-bg: #bdc3c7;
+$btn-border-radius-small: 50%;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+
+// .finder {
+//   border: 1px solid red;
+// }
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 .center {
      text-align: center;
 }
 
+.feed {
+  padding-top: 0;
+}
+
 .navbar-brand {
      font-weight: bold;
+}
+
+.article {
+  font-size: 1.2em;
+}
+
+.btn-success {
+  font-size: 0.75em;
+  line-height: 0.8em;
+  float: right;
+  margin-top: 2.5px;
+}
+
+ol {
+  width: 65%;
+  margin-left: 17.5%;
+}
+
+ol li {
+  line-height: 1.75em;
 }

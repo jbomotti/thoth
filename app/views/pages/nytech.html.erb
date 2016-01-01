@@ -1,0 +1,11 @@
+<div class="container">
+  <ol class="feed">
+    <h1 class="center">NY Times Tech</h1>
+    <% @articles.each do |entry| %>
+      <li>
+        <%= link_to entry.title, entry.url, :target => '_blank', :class => 'article' %>
+        <%= link_to "Favorite", favorites_path(:article_id => entry.id), :class => 'btn btn-sm btn-success' %>
+      </li>
+    <% end %>
+  </ol>
+</div>
