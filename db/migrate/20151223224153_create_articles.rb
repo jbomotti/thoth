@@ -3,7 +3,7 @@ class CreateArticles < ActiveRecord::Migration
     create_table :articles do |t|
       t.string :title
       t.string :url
-      t.text :summary
+      t.time :published
 
       t.timestamps null: false
     end

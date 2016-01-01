@@ -1,11 +1,17 @@
 <div class="container">
-  <ol class="finder feed">
-    <h1 class="finder center">Favorite Articles</h1>
-    <% @favorites.each do |entry| %>
-      <li class="finder">
-        <%= link_to entry.title, entry.url, :target => '_blank', :class => 'article' %>
-        <%= link_to "Favorite", favorites_path(:article_id => entry.id), :class => 'btn btn-sm btn-success finder' %>
-      </li>
+  <ol class="feed">
+    <h1 class="center">Favorite Articles</h1>
+    <% if has_favorites %>
+      <% @favorites.each do |entry| %>
+        <li>
+          <%= link_to entry.title, entry.url, :target => '_blank', :class => 'article' %>
+          <%= link_to "Remove", favorites_path(:favorite_id => entry.id, :remove => true), :class => 'btn btn-sm btn-success' %>
+        </li>
+      <% end %>
+    <% else %>
+      <p class="center">
+        You haven't added any Favorites yet!
+      </p>
     <% end %>
   </ol>
 </div>

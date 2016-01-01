@@ -3,7 +3,7 @@ class CreateFavorites < ActiveRecord::Migration
     create_table :favorites do |t|
       t.string :title
       t.string :url
-      t.text :summary
+      t.time :published
 
       t.timestamps null: false
     end
